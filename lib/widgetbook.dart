@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:coffee_now_app_widgetbook/src/components/auth_component.dart';
 import 'package:coffee_now_app_widgetbook/src/widgets/buttons/buttons_assembly.dart';
 import 'package:coffee_now_app_widgetbook/src/widgets/text_fields_assembly.dart';
@@ -11,6 +13,7 @@ class HotReload extends StatelessWidget {
   Widget build(BuildContext context) {
     return Widgetbook.material(
       addons: [
+        if(!Platform.isAndroid && !Platform.isIOS)
         DeviceFrameAddon(
           devices: [
             ...Devices.android.all,
