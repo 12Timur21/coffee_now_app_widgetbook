@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgetbook/widgetbook.dart';
 
-void main() {
-  runApp(const HotReload());
-}
 
 class HotReload extends StatelessWidget {
   const HotReload({Key? key}) : super(key: key);
@@ -30,10 +27,12 @@ class HotReload extends StatelessWidget {
           useCases: [
             WidgetbookUseCase(
               name: 'with green color',
-              builder: (context) => Container(
-                width: 100,
-                height: 100,
-                color: Colors.green,
+              builder: (context) => Center(
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.green,
+                ),
               ),
             ),
           ],
